@@ -5,21 +5,21 @@
 class Ssd < Formula
   desc "Agentless remote deployment tool for Docker Compose stacks"
   homepage "https://github.com/byteink/ssd"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteink/ssd/releases/download/v0.2.1/ssd_Darwin_x86_64.tar.gz"
-      sha256 "1707c12956aab1a5674f8b6576fcf3021e4229463fbfe2455914780a2c27aec9"
+      url "https://github.com/byteink/ssd/releases/download/v0.3.0/ssd_Darwin_x86_64.tar.gz"
+      sha256 "df8bee278b1ca97503f971f5171ef1a8c162cba998c9b772a84ee9737f2a9dd6"
 
       def install
         bin.install "ssd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteink/ssd/releases/download/v0.2.1/ssd_Darwin_arm64.tar.gz"
-      sha256 "5049994805dde5bb1caa64d79aafc1b6723b58826b94e32803dc6c277a4e13d4"
+      url "https://github.com/byteink/ssd/releases/download/v0.3.0/ssd_Darwin_arm64.tar.gz"
+      sha256 "9c72fef997aa5429f3cf07dddfcc113b38dd16970240cf0050027026b66689b6"
 
       def install
         bin.install "ssd"
@@ -29,15 +29,15 @@ class Ssd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteink/ssd/releases/download/v0.2.1/ssd_Linux_x86_64.tar.gz"
-      sha256 "d68e3065634575e3eff8718ef1b42cbe3082feff07caef3c8827cf45858253a7"
+      url "https://github.com/byteink/ssd/releases/download/v0.3.0/ssd_Linux_x86_64.tar.gz"
+      sha256 "72acdea0c0cbe06644e9db3f15c4ad293a068cb4044d98ea7419bb48655e1587"
       def install
         bin.install "ssd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteink/ssd/releases/download/v0.2.1/ssd_Linux_arm64.tar.gz"
-      sha256 "da3908a37fddee446200cb9e45992f82868891da8c83672d31e7369e6a43a41b"
+      url "https://github.com/byteink/ssd/releases/download/v0.3.0/ssd_Linux_arm64.tar.gz"
+      sha256 "ab32ea2e2bda9ac13863d4f26393801bb55afd91079adce60b2b6879d34b7cd3"
       def install
         bin.install "ssd"
       end
