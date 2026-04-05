@@ -5,21 +5,21 @@
 class Ssd < Formula
   desc "Agentless remote deployment tool for Docker Compose stacks"
   homepage "https://github.com/byteink/ssd"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteink/ssd/releases/download/v0.10.0/ssd_Darwin_x86_64.tar.gz"
-      sha256 "ede14f4ec957a9e62d9898f4d41f73e2430b2560f53ea075a9438f951c6abe37"
+      url "https://github.com/byteink/ssd/releases/download/v0.11.0/ssd_Darwin_x86_64.tar.gz"
+      sha256 "eead25f4f79e96554e96ce22cef74330479a83f7fe21bc0448a97517616b6b24"
 
       define_method(:install) do
         bin.install "ssd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteink/ssd/releases/download/v0.10.0/ssd_Darwin_arm64.tar.gz"
-      sha256 "84a801e66da15b17bf00ec49d59dde08959eef9cbb20a6877ea8ff93879aa0eb"
+      url "https://github.com/byteink/ssd/releases/download/v0.11.0/ssd_Darwin_arm64.tar.gz"
+      sha256 "68bf47f19503f99575c780ede4a5db0e1e87ec3cf30c3b1cc80ec75980f73208"
 
       define_method(:install) do
         bin.install "ssd"
@@ -29,15 +29,15 @@ class Ssd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteink/ssd/releases/download/v0.10.0/ssd_Linux_x86_64.tar.gz"
-      sha256 "969b2954c993c7b5244b8e2cfec17b9f1824de104b85ed68efdb995d2c488a9e"
+      url "https://github.com/byteink/ssd/releases/download/v0.11.0/ssd_Linux_x86_64.tar.gz"
+      sha256 "46274147a753e6437687b30069357a9cb078a5b1f06927251d760e6553c98f50"
       define_method(:install) do
         bin.install "ssd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteink/ssd/releases/download/v0.10.0/ssd_Linux_arm64.tar.gz"
-      sha256 "2e6e8c9f041083259ec599845344b976410a6fbb66189a7470d4d102adc56c67"
+      url "https://github.com/byteink/ssd/releases/download/v0.11.0/ssd_Linux_arm64.tar.gz"
+      sha256 "44cf34bb24b6ad7e49a6e9739417a28c3a22f82bcc6c600c0bea8ca862e11e7f"
       define_method(:install) do
         bin.install "ssd"
       end
