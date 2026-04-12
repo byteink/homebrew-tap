@@ -5,13 +5,13 @@
 class Ssd < Formula
   desc "Agentless remote deployment tool for Docker Compose stacks"
   homepage "https://github.com/byteink/ssd"
-  version "0.12.0"
+  version "0.13.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteink/ssd/releases/download/v0.12.0/ssd_Darwin_x86_64.tar.gz"
-      sha256 "1ec3f14a3a5905a8fa2b4a9185090d448ffeaafc0eb0dfd31b1fe391c89f1ae1"
+      url "https://github.com/byteink/ssd/releases/download/v0.13.0/ssd_Darwin_x86_64.tar.gz"
+      sha256 "83b09facd35e39bae9734ac8cdaade744d37c3ee2f3574ad453751bb82fb3836"
 
       define_method(:install) do
         bin.install "ssd"
@@ -19,8 +19,8 @@ class Ssd < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteink/ssd/releases/download/v0.12.0/ssd_Darwin_arm64.tar.gz"
-      sha256 "686f3dbeeca6a6cd05f81d3259f8219a4d5bac96095b3866217bed971e46c955"
+      url "https://github.com/byteink/ssd/releases/download/v0.13.0/ssd_Darwin_arm64.tar.gz"
+      sha256 "d8710f8033839ab96eccb17f38bdcb5e0dcab937dd7d2b4ad11cec670cb5dd26"
 
       define_method(:install) do
         bin.install "ssd"
@@ -31,16 +31,16 @@ class Ssd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteink/ssd/releases/download/v0.12.0/ssd_Linux_x86_64.tar.gz"
-      sha256 "c93cf4e821bdf2fcf9b1a2dfd3693cb2bd97619e0d7bf91cb14d7fd08bcae948"
+      url "https://github.com/byteink/ssd/releases/download/v0.13.0/ssd_Linux_x86_64.tar.gz"
+      sha256 "ffc3edcaa565c5c1286a10d6dbaa052282c3bd2c0a95b891b1ad32db2f98b811"
       define_method(:install) do
         bin.install "ssd"
         (share/"ssd").install "skill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteink/ssd/releases/download/v0.12.0/ssd_Linux_arm64.tar.gz"
-      sha256 "00c37d11fbe911ef1088557f9eed0dc61becd91b5cbb05a074e22d23dcce2850"
+      url "https://github.com/byteink/ssd/releases/download/v0.13.0/ssd_Linux_arm64.tar.gz"
+      sha256 "21c59816b1c9df61dee27b7b2bd5345d44651ecc132336d5c6a84ce60d7b0adf"
       define_method(:install) do
         bin.install "ssd"
         (share/"ssd").install "skill"
