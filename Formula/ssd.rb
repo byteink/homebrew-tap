@@ -11,7 +11,7 @@ class Ssd < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteink/ssd/releases/download/v0.16.0/ssd_Darwin_x86_64.tar.gz"
-      sha256 "24d79307e8e9fd78c9ef87e61ce75114475d17428f5b2e1dc977ce92f7047564"
+      sha256 "eab9dffcb143ac1aac08027987a7a6c1c5bd38b2206a3eaea424fb926a06e665"
 
       define_method(:install) do
         bin.install "ssd"
@@ -20,7 +20,7 @@ class Ssd < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteink/ssd/releases/download/v0.16.0/ssd_Darwin_arm64.tar.gz"
-      sha256 "479f27c7297645d91d04ac2eaf417580defec47b97ee464c0224dad0c9ee58fd"
+      sha256 "cbf193d6f47b3d673bc2c0e1c32a0164a98a39774c24aeb6ebe91d4b263d49b5"
 
       define_method(:install) do
         bin.install "ssd"
@@ -32,7 +32,7 @@ class Ssd < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteink/ssd/releases/download/v0.16.0/ssd_Linux_x86_64.tar.gz"
-      sha256 "be9c754dfc32d295593a1795427d3675734f2d7de3671e6fb5a4288266a81f76"
+      sha256 "465658ced4d71141e30e6c918092ce42e0920f8fc7ec7ad83710823f3dd6d566"
       define_method(:install) do
         bin.install "ssd"
         (share/"ssd").install "skill"
@@ -40,7 +40,7 @@ class Ssd < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteink/ssd/releases/download/v0.16.0/ssd_Linux_arm64.tar.gz"
-      sha256 "7ae90b79e6ff92b89398419f252490b64af903ec69fd561a1a22ec9aa6a9b8a1"
+      sha256 "d9d16786130655797ad00e5abbee43bb729c7828487985fe390e25c095d540a0"
       define_method(:install) do
         bin.install "ssd"
         (share/"ssd").install "skill"
