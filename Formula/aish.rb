@@ -13,18 +13,18 @@ class Aish < Formula
   on_macos do
     on_arm do
       url "https://github.com/byteink/aish/releases/download/v0.1.0/aish_Darwin_arm64.tar.gz"
-      sha256 "16dffdaa056512dc760fb71bcd1a75bb7fe1528e9cb9cd9bf7c4786e2d5ddb0b"
+      sha256 "682126faec79e26a52f0a065a311b080f3e14888b8dde2857d308e6c86ed095a"
     end
     on_intel do
       url "https://github.com/byteink/aish/releases/download/v0.1.0/aish_Darwin_x86_64.tar.gz"
-      sha256 "ccf71451f7646c03fd6425fb12365176c622b1727132466d7162af2e2d374dbc"
+      sha256 "8ca6756c9fd60dfa3443961b6f13ec5ca90d65827dec8614f8f8d70f8e03b717"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/byteink/aish/releases/download/v0.1.0/aish_Linux_x86_64.tar.gz"
-      sha256 "0a20c11d832c6edf90f7f55b3630f7ecae7708219bf83abddd320d5526c3131f"
+      sha256 "6538651e9a05ec98ba74e6f687b0cf39fdc5a291eba0e1e903e9585e51a1b3de"
     end
   end
 
