@@ -7,24 +7,24 @@
 class Aish < Formula
   desc "AI shell assistant that turns natural language into shell commands"
   homepage "https://github.com/byteink/aish"
-  version "0.2.0"
+  version "0.3.0"
   license "Elastic-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/byteink/aish/releases/download/v0.2.0/aish_Darwin_arm64.tar.gz"
-      sha256 "42152be581e1a2387e9cf41dfdfa4f3ad5df1c84a7546f4215eb3dabee8bf970"
+      url "https://github.com/byteink/aish/releases/download/v0.3.0/aish_Darwin_arm64.tar.gz"
+      sha256 "c6a463453c3811f6a857e264c8936a4880b04a1b4f117dc8e7624a6aabcceb82"
     end
     on_intel do
-      url "https://github.com/byteink/aish/releases/download/v0.2.0/aish_Darwin_x86_64.tar.gz"
-      sha256 "dcdfe64fcfef9464a2815924dde6341fb7b1eaffb26c377331bc91a0b5d330cc"
+      url "https://github.com/byteink/aish/releases/download/v0.3.0/aish_Darwin_x86_64.tar.gz"
+      sha256 "c7f84d56d2635ca3f2b5c42bda0feced1cf3f8011021163e6fda657669211add"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/byteink/aish/releases/download/v0.2.0/aish_Linux_x86_64.tar.gz"
-      sha256 "4aa5ded7f08d3404a19361d84f3841007e9ef6bf97a1ec0afd00cdeaf60bf445"
+      url "https://github.com/byteink/aish/releases/download/v0.3.0/aish_Linux_x86_64.tar.gz"
+      sha256 "bf6acfd18f2c7b386eabc57a568fe4b4c0af68b013e00d267d18b9ab828a55e7"
     end
   end
 
