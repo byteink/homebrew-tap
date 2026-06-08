@@ -1,10 +1,10 @@
 class Voiced < Formula
   desc "Local OpenAI-compatible voice gateway (STT via whisper.cpp)"
   homepage "https://github.com/byteink/voiced"
-  url "https://github.com/byteink/voiced/releases/download/v0.2.2/voiced_Darwin_arm64.tar.gz"
-  sha256 "facf81294dd6d22950db62d7afc0dca276f564e086174cdf1e4a628c31a78dca"
+  url "https://github.com/byteink/voiced/releases/download/v0.2.3/voiced_Darwin_arm64.tar.gz"
+  sha256 "64806e4dc48c803529ec4407a90c65622abf7f96429ee443b15eff14c640e28b"
   license "MIT"
-  version "0.2.2"
+  version "0.2.3"
 
   depends_on arch: :arm64
   depends_on :macos
@@ -22,7 +22,7 @@ class Voiced < Formula
         voiced start
 
       The agent installs a launchd plist at
-        ~/Library/LaunchAgents/com.user.voiced.plist
+        ~/Library/LaunchAgents/io.byteink.voiced.plist
       and listens on http://127.0.0.1:2022
     CAVEATS
   end
