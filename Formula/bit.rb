@@ -1,0 +1,37 @@
+# Rendered by dist/brew/publish.sh — do not hand-edit Formula/bit.rb in
+# byteink/homebrew-tap, edit this template instead.
+# `brew install byteink/tap/bit` (tap repo is the shared byteink/homebrew-tap,
+# not a per-project homebrew-bit).
+#
+# Apple Silicon only: the compiler has no x86_64-macos build (dist/README.md,
+# "Which targets actually ship" — the Mach-O linker has no x86-64 relocation
+# support). on_intel odie's with a clear message instead of silently
+# installing nothing or the wrong binary.
+class Bit < Formula
+  desc "Compiler for the Bit programming language"
+  homepage "https://bitlang.org"
+  license "Apache-2.0"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/byteink/bit/releases/download/v0.1.0/bit-0.1.0-macos-aarch64.tar.xz"
+      sha256 "22bdb6a9aaf200fc899af8751411dd36faa387a79e1d601cd51ec0a5c1d6f05f"
+    end
+    on_intel do
+      odie "bit has no x86_64-macos build yet (see byteink/bit dist/README.md); Apple Silicon only for now"
+    end
+  end
+
+  # libexec, not bin.install: `bit` resolves stdlib/libbitrt.a relative to its
+  # own real (symlink-resolved) location (dist/README.md, "Path resolution").
+  # Keeping the whole shipped tree together under libexec preserves that
+  # layout; only the binary itself is exposed on PATH.
+  def install
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"bin/bit"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/bit version")
+  end
+end
