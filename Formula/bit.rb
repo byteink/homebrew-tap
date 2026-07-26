@@ -10,14 +10,15 @@
 class Bit < Formula
   desc "Compiler for the Bit programming language"
   homepage "https://bitlang.org"
-  license "Apache-2.0"
-
   # EXPLICIT, not inferred. Homebrew guesses the version from the url filename,
   # and `bit-0.1.0-macos-aarch64.tar.xz` made it guess "64" - it took the digits
   # off `aarch64`. That installed into Cellar/bit/64, made `brew list --versions`
   # report "bit 64", and broke the `test do` block below, which asserts the
   # detected version appears in `bit version` output.
+  #
+  # Before `license`, which is the order `brew audit` requires.
   version "0.1.0"
+  license "Apache-2.0"
 
   on_macos do
     on_arm do
