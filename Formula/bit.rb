@@ -12,6 +12,13 @@ class Bit < Formula
   homepage "https://bitlang.org"
   license "Apache-2.0"
 
+  # EXPLICIT, not inferred. Homebrew guesses the version from the url filename,
+  # and `bit-0.1.0-macos-aarch64.tar.xz` made it guess "64" - it took the digits
+  # off `aarch64`. That installed into Cellar/bit/64, made `brew list --versions`
+  # report "bit 64", and broke the `test do` block below, which asserts the
+  # detected version appears in `bit version` output.
+  version "0.1.0"
+
   on_macos do
     on_arm do
       url "https://github.com/byteink/bit/releases/download/v0.1.0/bit-0.1.0-macos-aarch64.tar.xz"
