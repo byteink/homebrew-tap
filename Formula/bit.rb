@@ -17,13 +17,13 @@ class Bit < Formula
   # detected version appears in `bit version` output.
   #
   # Before `license`, which is the order `brew audit` requires.
-  version "0.1.6"
+  version "0.1.7"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/byteink/bit/releases/download/v0.1.6/bit-0.1.6-macos-aarch64.tar.xz"
-      sha256 "5d886696f65cdc5a4bed3f1f9e27ffefd36022623cc01bafa4e2676c9a5682ca"
+      url "https://github.com/byteink/bit/releases/download/v0.1.7/bit-0.1.7-macos-aarch64.tar.xz"
+      sha256 "1023bf8ef9d0aa07a76c4bf6477290d02af1216ed10e30286b79e3794ac8022c"
     end
     on_intel do
       odie "bit has no x86_64-macos build yet (see byteink/bit dist/README.md); Apple Silicon only for now"
