@@ -1,10 +1,10 @@
 class Voiced < Formula
   desc "Local OpenAI-compatible voice gateway (STT via whisper.cpp)"
   homepage "https://github.com/byteink/voiced"
-  url "https://github.com/byteink/voiced/releases/download/v0.5.0/voiced_Darwin_arm64.tar.gz"
-  sha256 "2885a7ddb187fafaa69bad221effdce48333db3967a881a9d4d4bada99d4400b"
+  url "https://github.com/byteink/voiced/releases/download/v0.6.0/voiced_Darwin_arm64.tar.gz"
+  sha256 "736c90fb05affa31f3fa5c344001294583f9154176b371fd507f8ca91bca5563"
   license "MIT"
-  version "0.5.0"
+  version "0.6.0"
 
   depends_on arch: :arm64
   depends_on :macos
