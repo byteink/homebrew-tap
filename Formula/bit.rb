@@ -1,10 +1,10 @@
-# Rendered by dist/brew/publish.sh — do not hand-edit Formula/bit.rb in
+# Rendered by dist/brew/publish.sh - do not hand-edit Formula/bit.rb in
 # byteink/homebrew-tap, edit this template instead.
 # `brew install byteink/tap/bit` (tap repo is the shared byteink/homebrew-tap,
 # not a per-project homebrew-bit).
 #
 # Apple Silicon only: the compiler has no x86_64-macos build (dist/README.md,
-# "Which targets actually ship" — the Mach-O linker has no x86-64 relocation
+# "Which targets actually ship" - the Mach-O linker has no x86-64 relocation
 # support). on_intel odie's with a clear message instead of silently
 # installing nothing or the wrong binary.
 class Bit < Formula
@@ -17,13 +17,13 @@ class Bit < Formula
   # detected version appears in `bit version` output.
   #
   # Before `license`, which is the order `brew audit` requires.
-  version "0.14.0"
+  version "0.15.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/byteink/bit/releases/download/v0.14.0/bit-0.14.0-macos-aarch64.tar.xz"
-      sha256 "adf2038df067814585e447146d1d38e4788a44fba7c888c50c9873404cd00714"
+      url "https://github.com/byteink/bit/releases/download/v0.15.0/bit-0.15.0-macos-aarch64.tar.xz"
+      sha256 "9e18541ade61cdd9dd35eb1117f8442af5235e4897da141443fc06739f4e22eb"
     end
     on_intel do
       odie "bit has no x86_64-macos build yet (see byteink/bit dist/README.md); Apple Silicon only for now"
